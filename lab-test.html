@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Test</title>
+    <link rel="stylesheet" href="stylesheets/lab-test.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Book Your Slot</h1>
+      <div class="container">
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>
+              <h2>1. Your Contact Details</h2>
+            </legend>
+            <table>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="f-name"
+                    id="f-name"
+                    placeholder="First Name"
+                    autofocus
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="p-id"
+                    id="p-id"
+                    placeholder="Patient ID if exists"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Contact Number"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="Email ID"
+                  />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h2>2. Address</h2>
+            </legend>
+            <table>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    name="h-no"
+                    id="h-no"
+                    placeholder="House Number"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="street"
+                    id="street"
+                    placeholder="Street"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="Area" id="Area" placeholder="Area" />
+                </td>
+              </tr>
+            </table>
+
+            <h3>District</h3>
+            <p><b>Choose your district</b></p>
+            <select name="district" id="district" required>
+              <option value="option1">Choose</option>
+              <option value="option2">District 1</option>
+              <option value="option2">District 2</option>
+              <option value="option2">District 3</option>
+              <option value="option2">District 4</option>
+              <option value="option2">District 5</option>
+              <option value="option2">District 6</option>
+            </select>
+          </fieldset>
+
+          <fieldset aria-required="true">
+            <legend>
+              <h2>3. Choose the Test Type</h2>
+            </legend>
+            <input type="checkbox" name="tests" id="c1" />
+            <label for="c1">CBC</label>
+            <br />
+            <input type="checkbox" name="tests" id="c2" />
+            <label for="c2">Complete Urine</label>
+            <br />
+            <input type="checkbox" name="tests" id="c3" />
+            <label for="c3">Lipid Profile</label>
+            <br />
+            <input type="checkbox" name="tests" id="c4" />
+            <label for="c4">Thyroid Stimulating Hormone(TSH)</label>
+            <br />
+            <input type="checkbox" name="tests" id="c5" />
+            <label for="c5">Glucose Test</label>
+          </fieldset>
+          <p><b>Do you want a hard copy of the report also?</b></p>
+          <input type="radio" name="yes" id="r1" />
+          <label for="r1">Yes</label>
+          <br />
+          <input type="radio" name="no" id="r2" />
+          <label for="r2">No</label>
+
+          <h2>4. Select your comfortable date and time</h2>
+          <input type="datetime-local" required />
+
+          <div class="buttons">
+            <button
+              type="submit"
+              name="form"
+              formaction="https://httpbin.org/post"
+              formmethod="post"
+            >
+              Submit
+            </button>
+            <button type="reset" name="form">Reset</button>
+          </div>
+        </form>
+
+        <img src="Images/Lab-Test/lab-test.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>
